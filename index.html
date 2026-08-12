@@ -103,7 +103,7 @@
   .feature .label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--paper-accent); }
   .feature p { margin: 8px 0 0; font-size: 0.93rem; color: var(--paper-text); }
 
-  .selfhost { padding: 76px 0; text-align: center; }
+  .selfhost { padding: 76px 0; text-align: center; scroll-margin-top: 24px; }
   .selfhost h2 { font-size: 1.5rem; }
   .selfhost > .wrap > p { color: var(--paper-muted); max-width: 30rem; margin: 12px auto 30px; }
   .callout {
@@ -140,6 +140,10 @@
   @media (prefers-reduced-motion: reduce) {
     .btn { transition: none; }
   }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
 </style>
 </head>
 <body>
@@ -150,7 +154,7 @@
     <nav>
       <a href="https://docs.taskpapr.com">Docs</a>
       <a href="https://github.com/taskpapr">GitHub</a>
-      <a href="https://app.taskpapr.com">Launch app</a>
+      <a href="https://app.taskpapr.com">Hosted app</a>
     </nav>
   </div>
 </div>
@@ -160,8 +164,8 @@
     <h1>The task board that works<br>like a sheet of paper.</h1>
     <p>Spatial, not hierarchical. Calm, not cluttered.<br>Self-hosted, and yours.</p>
     <div class="ctas">
-      <a class="btn btn--primary" href="https://app.taskpapr.com">Launch app →</a>
-      <a class="btn btn--secondary" href="https://docs.taskpapr.com">Read the docs</a>
+      <a class="btn btn--primary" href="#self-host">Host it yourself →</a>
+      <a class="btn btn--secondary" href="https://app.taskpapr.com">Want us to host it?</a>
     </div>
   </div>
 </div>
@@ -187,7 +191,7 @@
   </div>
 </div>
 
-<div class="selfhost">
+<div class="selfhost" id="self-host">
   <div class="wrap">
     <h2>Self-hosted, by design</h2>
     <p>Your tasks stay yours — no vendor account, no forced cloud sync. One file, one container.</p>
@@ -207,8 +211,6 @@
     <a href="https://docs.taskpapr.com">Docs</a>
     <span class="sep">·</span>
     <a href="https://github.com/taskpapr">GitHub</a>
-    <span class="sep">·</span>
-    <span>v0.45.5</span>
   </div>
 </footer>
 
