@@ -10,11 +10,14 @@
 <meta property="og:title" content="taskpapr">
 <meta property="og:description" content="A minimal, paper-inspired task board. Spatial, not hierarchical. Calm, not cluttered. Self-hosted, and yours.">
 <meta property="og:url" content="https://taskpapr.com">
+<meta property="og:image" content="https://taskpapr.com/assets/social-card.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="taskpapr">
 <meta name="twitter:description" content="A minimal, paper-inspired task board. Spatial, not hierarchical. Calm, not cluttered. Self-hosted, and yours.">
+<meta name="twitter:image" content="https://taskpapr.com/assets/social-card.png">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237c6f4a'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-weight='600' fill='%23f5f0e8' text-anchor='middle'%3Et%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,7 +77,11 @@
     font-weight: 600;
     letter-spacing: 0.01em;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
+  .wordmark img { display: block; }
   .topbar nav { display: flex; gap: 28px; font-size: 0.92rem; }
   .topbar nav a { color: var(--paper-muted); text-decoration: none; }
   .topbar nav a:hover { color: var(--paper-accent-hover); }
@@ -147,7 +154,7 @@
 
 <div class="topbar">
   <div class="wrap">
-    <a class="wordmark" href="/">taskpapr</a>
+    <a class="wordmark" href="/"><img src="/assets/mark.svg" alt="" width="20" height="20"> taskpapr</a>
     <nav>
       <a href="https://docs.taskpapr.com">Docs</a>
       <a href="https://github.com/taskpapr">GitHub</a>
