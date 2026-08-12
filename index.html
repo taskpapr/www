@@ -103,7 +103,7 @@
   .feature .label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--paper-accent); }
   .feature p { margin: 8px 0 0; font-size: 0.93rem; color: var(--paper-text); }
 
-  .selfhost { padding: 76px 0; text-align: center; scroll-margin-top: 24px; }
+  .selfhost { padding: 76px 0; text-align: center; }
   .selfhost h2 { font-size: 1.5rem; }
   .selfhost > .wrap > p { color: var(--paper-muted); max-width: 30rem; margin: 12px auto 30px; }
   .callout {
@@ -125,6 +125,7 @@
     overflow-x: auto;
   }
   .callout .note { margin: 14px 0 0; font-size: 0.82rem; color: var(--paper-muted); }
+  .callout .note a { color: var(--paper-accent-hover); text-decoration: underline; }
 
   footer { border-top: 1px solid var(--paper-border); padding: 30px 0 48px; }
   footer .wrap { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; font-size: 0.85rem; color: var(--paper-muted); }
@@ -139,10 +140,6 @@
 
   @media (prefers-reduced-motion: reduce) {
     .btn { transition: none; }
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    html { scroll-behavior: smooth; }
   }
 </style>
 </head>
@@ -164,8 +161,8 @@
     <h1>The task board that works<br>like a sheet of paper.</h1>
     <p>Spatial, not hierarchical. Calm, not cluttered.<br>Self-hosted, and yours.</p>
     <div class="ctas">
-      <a class="btn btn--primary" href="#self-host">Host it yourself →</a>
-      <a class="btn btn--secondary" href="https://app.taskpapr.com">Want us to host it?</a>
+      <a class="btn btn--primary" href="https://app.taskpapr.com">Try free for 14 days →</a>
+      <a class="btn btn--secondary" href="https://docs.taskpapr.com/docs/getting-started">Prefer to self-host?</a>
     </div>
   </div>
 </div>
@@ -191,7 +188,7 @@
   </div>
 </div>
 
-<div class="selfhost" id="self-host">
+<div class="selfhost">
   <div class="wrap">
     <h2>Self-hosted, by design</h2>
     <p>Your tasks stay yours — no vendor account, no forced cloud sync. One file, one container.</p>
@@ -199,7 +196,7 @@
       <code>docker run -p 3033:3033 \
   -v taskpapr_data:/data \
   ghcr.io/taskpapr/taskpapr</code>
-      <p class="note">Then open <strong>localhost:3033</strong>. Full guide in the docs →</p>
+      <p class="note">Then open <strong>localhost:3033</strong>. <a href="https://docs.taskpapr.com/docs/getting-started">Full guide in the docs →</a></p>
     </div>
   </div>
 </div>
